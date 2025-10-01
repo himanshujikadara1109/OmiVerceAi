@@ -1,0 +1,92 @@
+/* Import Tailwind v4 syntax */
+@import "tailwindcss";
+/* @import "tailwindcss/preflight"; /* replaces @tailwind base */
+/* @import "tailwindcss/utilities"; replaces @tailwind utilities */ */
+
+/* Tailwind utilities */
+/* @tailwind utilities; */
+
+/* Universal Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* corrected from 'box-sizeing' */
+  background: black;
+}
+
+/* Custom Glow Animations */
+.glow {
+  text-shadow: 0 0 6px #6ec1ff, 0 0 12px #ff6ec7, 0 0 18px #6ec1ff;
+  transition: all 0.3s ease-in-out;
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    text-shadow: 0 0 6px #6ec1ff, 0 0 12px #ff6ec7, 0 0 18px #6ec1ff;
+  }
+  50% {
+    text-shadow: 0 0 12px #6ec1ff, 0 0 24px #ff6ec7, 0 0 36px #6ec1ff;
+  }
+}
+
+.shadow-glow {
+  box-shadow: 0 0 10px #0ff6f6, 0 0 20px #0ff6f6, 0 0 30px #ff00ff;
+}
+
+/* Neon Gradient Text */
+.text-gradient-neon {
+  background: linear-gradient(90deg, #ff6ec7, #6ec1ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Fonts */
+
+/* HEADINGS - Syne */
+@font-face {
+  font-family: 'syne';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/syne/v22/8vIH7w4qzmVxm2BL9G78HEY.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'syne';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/syne/v22/8vIH7w4qzmVxm2BL9G78HEY.woff2') format('woff2');
+}
+
+/* PARAGRAPH - Azeret Mono */
+@font-face {
+  font-family: 'azeret-mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/azeretmono/v17/3XFuErsiyJsY9O_Gepph-HHvZfn23vRKV0U.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'azeret-mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('//static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/azeretmono/v17/3XF5ErsiyJsY9O_Gepph-FvtTQgMQUdNekSfe_JR1byb2Z4nAdbJ.woff2') format('woff2');
+}
+
+/* Tailwind Utility Classes */
+.font-heading {
+  font-family: 'syne', sans-serif;
+}
+.font-paragraph {
+  font-family: 'azeret-mono', monospace;
+}
+
+html, body, #root {
+  background-color: black; /* ensures no white flashes */
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  /* overflow-x: hidden; */
+}

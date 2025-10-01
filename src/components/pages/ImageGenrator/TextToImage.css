@@ -1,0 +1,78 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.img-body {
+  flex: 8; /* 70% of the height */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-body img{
+    height: 70%;
+    width: 60%;
+}
+
+.prompt-body {
+  flex: 2; /* 30% of the height */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prompt-body input {
+  margin-left: 1rem;
+  flex: 7;
+  height: 60px;
+  padding: 0 20px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.prompt-body input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+.prompt-body button {
+  flex: 3;
+  height: 60px;
+  margin-right: 1rem;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: none;
+  background: rgba(0, 255, 128, 0.2);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.prompt-body button:hover {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+.prompt-body button:active {
+  background: rgba(255, 0, 0, 0.5);
+  transform: scale(0.95);
+}
